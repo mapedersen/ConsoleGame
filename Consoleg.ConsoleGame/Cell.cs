@@ -1,11 +1,11 @@
 ﻿internal class Cell
 {
-    public string Symbol { get; set; }
-
     public string symbol => ".";
+    public ConsoleColor Color { get; }
+
 
     public Cell(string symbol)
     {
-        Symbol = symbol;
+        Color = ConsoleColor.Red;
     }
 }
