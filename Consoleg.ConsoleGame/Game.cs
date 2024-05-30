@@ -15,6 +15,30 @@ internal class Game
     internal void Run()
     {
         Initialize();
+        Play();
+    }
+
+    private void Play()
+    {
+        bool gameInProgress = true;
+
+        do
+        {
+            //Draw map
+
+            //Getcommand
+
+            //Act
+
+            //Drawmap
+
+            //EnemyAction
+
+
+            //Drawmap
+
+        } while (gameInProgress);
+
     }
 
     private void Initialize()
