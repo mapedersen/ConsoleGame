@@ -11,6 +11,6 @@
         Width = width;
         Height = height;
 
-        cells = new Cell[width, height];
+        cells = new Cell[height, width];
     }
 }
