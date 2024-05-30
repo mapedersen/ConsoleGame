@@ -4,7 +4,7 @@
     public ConsoleColor Color { get; }
 
 
-    public Cell(string symbol)
+    public Cell()
     {
         Color = ConsoleColor.Red;
     }
