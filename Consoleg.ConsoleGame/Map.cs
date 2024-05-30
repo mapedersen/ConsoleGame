@@ -2,12 +2,15 @@
 {
     public int Width { get; set; }
     public int Height { get; set; }
+
+    private Cell[,] cells;
+
     public Map(int width, int height)
     {
         //Validate
         Width = width;
         Height = height;
 
-        var cells = new Cell[Width, Height];
+        cells = new Cell[width, height];
     }
 }

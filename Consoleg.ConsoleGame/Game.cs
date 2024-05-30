@@ -4,8 +4,12 @@ using System.Data;
 
 internal class Game
 {
+    private Map map = null!;
+    private Player player = null!;
+
     public Game()
     {
+        
     }
 
     internal void Run()
@@ -16,6 +20,7 @@ internal class Game
     private void Initialize()
     {
         //Todo: Read from config
-        var map = new Map(width: 10, height: 10);
+        map = new Map(width: 10, height: 10);
+        player = new Player();
     }
 }
