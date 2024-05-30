@@ -15,6 +15,7 @@ internal class Game
 
     private void Initialize()
     {
+        //Todo: Read from config
         var map = new Map(width: 10, height: 10);
     }
 }
