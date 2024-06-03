@@ -7,7 +7,7 @@ internal class Map
     private Cell[,] _cells;
     public int Width { get; set; }
     public int Height { get; set; }
-
+    public List<Creature> Creatures { get; } = new List<Creature>();
 
     public Map(int width, int height)
     {
