@@ -40,8 +40,6 @@ internal class Game
 
             //Drawmap
 
-            Console.ReadKey();
-
         } while (gameInProgress);
 
     }
