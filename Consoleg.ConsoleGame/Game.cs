@@ -51,7 +51,12 @@ internal class Game
         {
             for (int x = 0; x < _map.Width; x++)
             {
+
                 Cell? cell = _map.GetCell(y, x);
+                ArgumentNullException.ThrowIfNull(cell, nameof(cell));
+
+                IDrawable drawable = cell;
+
                 Console.ForegroundColor = cell.Color;
                 Console.Write(cell.Symbol);
             }
