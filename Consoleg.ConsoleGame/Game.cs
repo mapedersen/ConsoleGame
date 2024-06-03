@@ -49,7 +49,7 @@ internal class Game
         {
             for (int x = 0; x < _map.Width; x++)
             {
-
+                Cell cell = _map.GetCell(y, x);
             }
         }
 
