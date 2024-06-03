@@ -64,6 +64,7 @@ internal class Game
     {
         //Todo: Read from config
         _map = new Map(width: 10, height: 10);
-        _player = new Player();
+        Cell? playerCell = _map.GetCell(0, 0); 
+        _player = new Player(playerCell);
     }
 }
