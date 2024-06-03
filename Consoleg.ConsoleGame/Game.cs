@@ -57,12 +57,20 @@ internal class Game
 
                 IDrawable drawable = cell;
 
-                Console.ForegroundColor = cell.Color;
+                foreach (Creature creature in _map.Creatures)
+                {
+                    if (creature.Cell == drawable)
+                    {
+                        drawable = creature;
+                    }
+                }
+
+                Console.ForegroundColor = drawable.Color;
                 Console.Write(cell.Symbol);
             }
             Console.WriteLine();
         }
-
+        Console.ResetColor();
     }
 
     private void Initialize()
