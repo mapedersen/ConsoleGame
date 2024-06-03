@@ -37,6 +37,8 @@ internal class Game
 
             //Drawmap
 
+            Console.ReadKey();
+
         } while (gameInProgress);
 
     }
@@ -49,8 +51,11 @@ internal class Game
         {
             for (int x = 0; x < _map.Width; x++)
             {
-                Cell cell = _map.GetCell(y, x);
+                Cell? cell = _map.GetCell(y, x);
+                Console.ForegroundColor = cell.Color;
+                Console.Write(cell.Symbol);
             }
+            Console.WriteLine();
         }
 
     }
