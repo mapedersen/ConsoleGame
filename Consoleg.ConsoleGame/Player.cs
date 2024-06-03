@@ -2,10 +2,11 @@
 {
     public Cell Cell { get; }
     public string Symbol { get; }
-    public Player(Cell cell, string Symbol)
+    public ConsoleColor Color { get; } = ConsoleColor.Green;
+    public Player(Cell cell, string symbol)
     {
         Cell = cell;
-        this.Symbol = Symbol;
+        Symbol = symbol;
     }
 
 }
