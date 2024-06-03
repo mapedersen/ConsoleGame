@@ -4,8 +4,8 @@ using System.Data;
 
 internal class Game
 {
-    private Map map = null!;
-    private Player player = null!;
+    private Map _map = null!;
+    private Player _player = null!;
 
     public Game()
     {
@@ -25,7 +25,7 @@ internal class Game
         do
         {
             //Draw map
-
+            Drawmap();
             //Getcommand
 
             //Act
@@ -41,10 +41,24 @@ internal class Game
 
     }
 
+    private void Drawmap()
+    {
+        Console.Clear();
+
+        for (int y = 0; y < _map.Height; y++)
+        {
+            for (int x = 0; x < _map.Width; x++)
+            {
+
+            }
+        }
+
+    }
+
     private void Initialize()
     {
         //Todo: Read from config
-        map = new Map(width: 10, height: 10);
-        player = new Player();
+        _map = new Map(width: 10, height: 10);
+        _player = new Player();
     }
 }
