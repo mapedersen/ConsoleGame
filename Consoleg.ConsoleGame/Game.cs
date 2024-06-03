@@ -66,7 +66,7 @@ internal class Game
                 }
 
                 Console.ForegroundColor = drawable.Color;
-                Console.Write(cell.Symbol);
+                Console.Write(drawable.Symbol);
             }
             Console.WriteLine();
         }
