@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consoleg.ConsoleGame", "Consoleg.ConsoleGame\Consoleg.ConsoleGame.csproj", "{76AA1F52-E90E-4793-BE90-76ADFC1532FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consoleg.ConsoleGame", "Consoleg.ConsoleGame\Consoleg.ConsoleGame.csproj", "{76AA1F52-E90E-4793-BE90-76ADFC1532FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consoleg.LimitedList", "Consoleg.LimitedList\Consoleg.LimitedList.csproj", "{AB194DF2-9B42-4CA4-9A7D-60A55FB09777}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{76AA1F52-E90E-4793-BE90-76ADFC1532FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76AA1F52-E90E-4793-BE90-76ADFC1532FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76AA1F52-E90E-4793-BE90-76ADFC1532FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB194DF2-9B42-4CA4-9A7D-60A55FB09777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB194DF2-9B42-4CA4-9A7D-60A55FB09777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB194DF2-9B42-4CA4-9A7D-60A55FB09777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB194DF2-9B42-4CA4-9A7D-60A55FB09777}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
