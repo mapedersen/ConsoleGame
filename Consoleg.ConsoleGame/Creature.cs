@@ -1,17 +1,20 @@
-﻿internal class Creature : IDrawable
+﻿using System.Diagnostics.CodeAnalysis;
+
+internal class Creature : IDrawable
 {
     //ToDo: validate set
     private Cell _cell;
+    public string Symbol { get; }
     public Cell Cell 
     {
         get => _cell;
+        [MemberNotNull(nameof(Cell))]
         set
         {
             ArgumentNullException.ThrowIfNull(value, nameof(value));
             _cell = value;
         }
     }
-    public string Symbol { get; }
     public ConsoleColor Color { get; protected set; } = ConsoleColor.Green;
     public Creature(Cell cell, string symbol)
     {

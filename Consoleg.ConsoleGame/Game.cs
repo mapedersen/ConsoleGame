@@ -50,7 +50,7 @@ internal class Game
         switch (keyPressed)
         {
             case ConsoleKey.UpArrow:
-                Move(_player.Cell.Y - 1, _player.Cell.X);
+                Move(Direction.North);
                 break;
             case ConsoleKey.DownArrow:
                 Move(_player.Cell.Y + 1, _player.Cell.X);
