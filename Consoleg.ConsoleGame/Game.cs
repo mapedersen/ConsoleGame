@@ -53,21 +53,22 @@ internal class Game
                 Move(Direction.North);
                 break;
             case ConsoleKey.DownArrow:
-                Move(_player.Cell.Y + 1, _player.Cell.X);
+                Move(Direction.South);
                 break;
             case ConsoleKey.LeftArrow:
-                Move(_player.Cell.Y, _player.Cell.X - 1);
+                Move(Direction.West);
                 break;
             case ConsoleKey.RightArrow:
-                Move(_player.Cell.Y, _player.Cell.X + 1);
+                Move(Direction.South);
                 break;
         }
     }
 
-    private void Move(int y, int x)
+    private void Move(Position movement)
     {
-        var newPosition = _map.GetCell(y,x);
-        if (newPosition is not null) _player.Cell = newPosition;
+        var newPosition = _player.Cell.Position + movement;
+        var newCell = _map.GetCell(newPosition);
+        if (newCell is not null) _player.Cell = newCell;
     }
 
     private void Drawmap()
