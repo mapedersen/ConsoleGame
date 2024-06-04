@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Consoleg.ConsoleGame
+namespace Consoleg.ConsoleGame.UserInterface
 {
     internal class ConsoleUI
     {
