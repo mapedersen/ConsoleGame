@@ -59,7 +59,7 @@ internal class Game
                 Move(Direction.West);
                 break;
             case ConsoleKey.RightArrow:
-                Move(Direction.South);
+                Move(Direction.East);
                 break;
         }
     }
