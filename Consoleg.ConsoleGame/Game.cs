@@ -83,7 +83,7 @@ internal class Game
                 Cell? cell = _map.GetCell(y, x);
                 ArgumentNullException.ThrowIfNull(cell, nameof(cell));
 
-                IDrawable drawable = cell;
+                IDrawable drawable = _map.Creatures.CreatureAtExtension(cell);
 
                 foreach (Creature creature in _map.Creatures)
                 {
