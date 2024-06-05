@@ -1,4 +1,5 @@
-﻿using Consoleg.ConsoleGame.Extensions;
+﻿using Consoleg.ConsoleGame;
+using Consoleg.ConsoleGame.Extensions;
 using Consoleg.ConsoleGame.UserInterface;
 using System.Data;
 
@@ -60,7 +61,14 @@ internal class Game
             case ConsoleKey.RightArrow:
                 Move(Direction.East);
                 break;
+            case ConsoleKey.P:
+                PickUp();
+                break;
         }
+    }
+
+    private void PickUp()
+    {
     }
 
     private void Move(Position movement)
@@ -73,21 +81,7 @@ internal class Game
     private void Drawmap()
     {
         Console.Clear();
-
-        for (int y = 0; y < _map.Height; y++)
-        {
-            for (int x = 0; x < _map.Width; x++)
-            {
-                Cell? cell = _map.GetCell(y, x);
-                ArgumentNullException.ThrowIfNull(cell, nameof(cell));
-
-                IDrawable drawable = _map.Creatures.CreatureAtExtension(cell);
-                Console.ForegroundColor = drawable.Color;
-                Console.Write(drawable.Symbol);
-            }
-            Console.WriteLine();
-        }
-        Console.ResetColor();
+        ConsoleUI.Draw(_map);
     }
 
     private void Initialize()
@@ -97,5 +91,9 @@ internal class Game
         Cell? playerCell = _map.GetCell(0, 0); 
         _player = new Player(playerCell);
         _map.Creatures.Add(_player);
+
+        _map.GetCell(2, 5)?.Items.Add(Item.Coin());
+        _map.GetCell(5, 4)?.Items.Add(Item.Coin());
+        _map.GetCell(6, 1)?.Items.Add(Item.Stone());
     }
 }

@@ -26,7 +26,10 @@ namespace Consoleg.LimitedList
 
         public IEnumerator<T> GetEnumerator()
         {
-            return 
+            foreach (var item in _list)
+            {
+                yield return item;
+            } 
         }
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
